@@ -16,24 +16,24 @@ root['bg'] = "blue"
 
 root.resizable(False, False)
 
-
 def write(text):
-    """Append the supplied text to the calculator's input field."""
+    #Append the supplied text to the calculator's input field.
+    
     ent.insert(END, text)
 
     
-
 def clear():
-    """Remove all text from the calculator's input field."""
+    #Remove all text from the calculator's input field
     ent.delete(0, END)
 
 
 def cl():
-    """Evaluate the input expression and display its result or an error."""
     try:
         # Read the expression, calculate it, and show the result as text.
         res = eval(ent.get())
-        resl.config(text=str(res))
+        resl.config(text=res)
+        if res == str:
+            reslconfig(text="error")
         
         
     except Exception:
@@ -43,7 +43,7 @@ def cl():
         resl.config(text="You cannot divide by zero")
  
     
- ent = Entry()
+ent = Entry()
 ent.pack()
 clear = Button(text="ca", command=clear, width=40)
 clear.pack(side=BOTTOM)
@@ -51,7 +51,7 @@ resl = Label(root, text="", bg="blue")
 resl.pack()
 
 
-#frames whit buttons
+
 fr = Frame(root, bg="yellow", bd=2, relief=SOLID, padx=10, pady=10)
 fr.pack(padx=20, pady=0)
 
@@ -87,8 +87,14 @@ nm8.grid(row=7, column=8)
 nm9 = Button(fr, text="9", command=lambda: write("9"))
 nm9.grid(row=7, column=9)
 
+#0.0
+nb = Button(fr, text=".", command=lambda: write("."), width=1)
+nb.grid(row=4, column=5)
+
+
+
 resb = Button(fr, text="=", command=cl)
-resb.grid(row=4, column=5)
+resb.grid(row=8, column=7)
 
 
 root.mainloop()

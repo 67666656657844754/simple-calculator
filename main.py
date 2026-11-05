@@ -16,27 +16,34 @@ root['bg'] = "blue"
 
 root.resizable(False, False)
 
+
 def write(text):
+    """Append the supplied text to the calculator's input field."""
     ent.insert(END, text)
 
     
+
 def clear():
+    """Remove all text from the calculator's input field."""
     ent.delete(0, END)
 
 
 def cl():
+    """Evaluate the input expression and display its result or an error."""
     try:
+        # Read the expression, calculate it, and show the result as text.
         res = eval(ent.get())
         resl.config(text=str(res))
         
         
     except Exception:
+        # Display a generic message if evaluating the expression fails.
         resl.config(text="ERROR!")
     except ZeroDivisionError:
         resl.config(text="You cannot divide by zero")
  
     
-ent = Entry()
+ ent = Entry()
 ent.pack()
 clear = Button(text="ca", command=clear, width=40)
 clear.pack(side=BOTTOM)

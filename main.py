@@ -44,7 +44,7 @@ resl = Label(root, text="", bg="blue")
 resl.pack()
 
 
-
+#frames whit buttons
 fr = Frame(root, bg="yellow", bd=2, relief=SOLID, padx=10, pady=10)
 fr.pack(padx=20, pady=0)
 

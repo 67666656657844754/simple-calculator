@@ -1,6 +1,7 @@
 #Import module
 from tkinter import*
 
+
 #create  a window
 root = Tk()
 
@@ -12,7 +13,6 @@ root.geometry("200x200+0+0")
 
 #background color 
 root['bg'] = "blue"
-
 
 root.resizable(False, False)
 
@@ -55,15 +55,17 @@ resl.pack()
 fr = Frame(root, bg="yellow", bd=2, relief=SOLID, padx=10, pady=10)
 fr.pack(padx=20, pady=0)
 
-#+-*/ 
+#+-*/.
 pb = Button(fr, text="+", command=lambda: write("+"))
-pb.grid(row=4, column=6)
+pb.grid(row=4, column=5)
 mb = Button(fr, text="-", command=lambda: write("-"))
-mb.grid(row=4, column=7)
+mb.grid(row=4, column=6)
 mmb = Button(fr, text="*", command=lambda: write("*"))
-mmb.grid(row=4, column=8)
+mmb.grid(row=4, column=7)
 db = Button(fr, text="/", command=lambda: write("/"))
-db.grid(row=4, column=9)
+db.grid(row=4, column=8)
+nb = Button(fr, text=".", command=lambda: write("."))
+nb.grid(row=4, column=9)
 
 #numbers
 nm0 = Button(fr, text="0", command=lambda: write("0"))
@@ -87,9 +89,7 @@ nm8.grid(row=7, column=8)
 nm9 = Button(fr, text="9", command=lambda: write("9"))
 nm9.grid(row=7, column=9)
 
-#0.0
-nb = Button(fr, text=".", command=lambda: write("."), width=1)
-nb.grid(row=4, column=5)
+
 
 
 

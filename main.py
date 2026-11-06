@@ -18,6 +18,7 @@ root.resizable(False, False)
 def write(text):
     #Append the supplied text to the calculator's input field.
     ent.insert(END, text)
+    resl.config(text="")
 
     
 def clear():

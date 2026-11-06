@@ -11,7 +11,7 @@ root.title("calculator")
 root.geometry("200x200+0+0")
 
 #background color 
-root['bg'] = "blue"
+root['bg'] = "white"
 
 root.resizable(False, False)
 
@@ -30,26 +30,30 @@ def cl():
         # Read the expression, calculate it, and show the result as text.
         res = eval(ent.get())
         resl.config(text=res)
-          
+        resl.config(fg="blue")
         
-    except Exception:
-        # Display a generic message if evaluating the expression fails.
-        resl.config(text="ERROR!")
+  # Display a generic message if evaluating the expression fails.
     except ZeroDivisionError:
         resl.config(text="You cannot divide by zero")
+        resl.config(fg="yellow")    
+    except Exception:
+        resl.config(text="ERROR!")
+        resl.config(fg="red")
+   
+
  
     
 ent = Entry()
 ent.pack()
 clear = Button(text="ca", command=clear, width=40)
 clear.pack(side=BOTTOM)
-resl = Label(root, text="", bg="blue")
+resl = Label(root, text="", bg="white", fg="white")
 resl.pack()
 
 
 
 # Create a frame to group and organize the calculator buttons.
-fr = Frame(root, bg="yellow", bd=2, relief=SOLID, padx=10, pady=10)
+fr = Frame(root, bg="lightgray", bd=2, relief=SOLID, padx=10, pady=10)
 fr.pack(padx=20, pady=0)
 
 #+-*/.

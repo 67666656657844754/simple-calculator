@@ -45,17 +45,11 @@ def cl():
     
 # Create the text-entry field where the user types or builds a calculation.
 ent = Entry()
-# Add the entry field to the window using Tkinter's default layout placement.
 ent.pack()
-
 # Create a wide button that runs clear() when clicked to erase the entry field.
 clear = Button(text="ca", command=clear, width=40)
-# Place the clear button at the bottom of the window.
 clear.pack(side=BOTTOM)
-
-# Create a label for displaying the calculation result or an error message.
 resl = Label(root, text="", bg="white", fg="white")
-# Add the result label to the window using Tkinter's default layout placement.
 resl.pack()
 
 

@@ -52,6 +52,7 @@ resl.pack()
 
 
 
+# Create a frame to group and organize the calculator buttons.
 fr = Frame(root, bg="yellow", bd=2, relief=SOLID, padx=10, pady=10)
 fr.pack(padx=20, pady=0)
 

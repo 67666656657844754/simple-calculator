@@ -30,8 +30,7 @@ def cl():
         # Read the expression, calculate it, and show the result as text.
         res = eval(ent.get())
         resl.config(text=res)
-        if res == str:
-            reslconfig(text="error")   
+          
         
     except Exception:
         # Display a generic message if evaluating the expression fails.

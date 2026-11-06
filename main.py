@@ -1,7 +1,6 @@
 #Import module
 from tkinter import*
 
-
 #create  a window
 root = Tk()
 
@@ -18,7 +17,6 @@ root.resizable(False, False)
 
 def write(text):
     #Append the supplied text to the calculator's input field.
-    
     ent.insert(END, text)
 
     
@@ -33,8 +31,7 @@ def cl():
         res = eval(ent.get())
         resl.config(text=res)
         if res == str:
-            reslconfig(text="error")
-        
+            reslconfig(text="error")   
         
     except Exception:
         # Display a generic message if evaluating the expression fails.
@@ -65,8 +62,8 @@ mmb = Button(fr, text="*", command=lambda: write("*"))
 mmb.grid(row=4, column=7)
 db = Button(fr, text="/", command=lambda: write("/"))
 db.grid(row=4, column=8)
-nb = Button(fr, text=".", command=lambda: write("."))
-nb.grid(row=4, column=9)
+dotb = Button(fr, text=".", command=lambda: write("."))
+dotb.grid(row=4, column=9)
 
 #numbers
 nm0 = Button(fr, text="0", command=lambda: write("0"))
@@ -90,12 +87,7 @@ nm8.grid(row=7, column=8)
 nm9 = Button(fr, text="9", command=lambda: write("9"))
 nm9.grid(row=7, column=9)
 
-
-
-
-
 resb = Button(fr, text="=", command=cl)
 resb.grid(row=8, column=7)
-
 
 root.mainloop()

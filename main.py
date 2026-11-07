@@ -42,8 +42,6 @@ def cl():
         resl.config(text="ERROR!")
         resl.config(fg="red")
    
-
- 
     
 # Create the text-entry field where the user types or builds a calculation.
 ent = Entry()
@@ -53,8 +51,6 @@ clear = Button(text="ca", command=clear, width=40)
 clear.pack(side=BOTTOM)
 resl = Label(root, text="", bg="white", fg="white")
 resl.pack()
-
-
 
 # Create a frame to group and organize the calculator buttons.
 fr = Frame(root, bg="lightgray", bd=2, relief=SOLID, padx=10, pady=10)
@@ -96,7 +92,6 @@ nm9.grid(row=7, column=9)
 
 # Create the equals button; clicking it runs cl() to evaluate the entered expression.
 resb = Button(fr, text="=", command=cl)
-# Place the equals button in the calculator frame at row 8, column 7.
 resb.grid(row=8, column=7)
 
 root.mainloop()

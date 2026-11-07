@@ -94,7 +94,9 @@ nm8.grid(row=7, column=8)
 nm9 = Button(fr, text="9", command=lambda: write("9"))
 nm9.grid(row=7, column=9)
 
+# Create the equals button; clicking it runs cl() to evaluate the entered expression.
 resb = Button(fr, text="=", command=cl)
+# Place the equals button in the calculator frame at row 8, column 7.
 resb.grid(row=8, column=7)
 
 root.mainloop()

@@ -47,7 +47,7 @@ def cl():
 ent = Entry()
 ent.pack()
 # Create a wide button that runs clear() when clicked to erase the entry field.
-clear = Button(text="ca", command=clear, width=40)
+clear = Button(text="clear", command=clear, width=40)
 clear.pack(side=BOTTOM)
 resl = Label(root, text="", bg="white", fg="white")
 resl.pack()

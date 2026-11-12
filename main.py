@@ -15,10 +15,6 @@ root.geometry("200x200+0+0")
 root['bg'] = "white"
 
 
-
-#root.resizable(False, False)
-
-
 def write(text):
     #Append the supplied text to the calculator's input field.
     ent.insert(END, text)

@@ -11,7 +11,7 @@ root.title("calculator")
 root.geometry("200x200+0+0")
 
 #background color 
-root['bg'] = "white"
+root.config(bg="white")
 
 
 def write(text):

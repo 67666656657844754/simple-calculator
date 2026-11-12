@@ -1,5 +1,6 @@
 #Import module
 from tkinter import*
+import os
 
 #create  a window
 root = Tk()
@@ -11,7 +12,11 @@ root.title("calculator")
 root.geometry("200x200+0+0")
 
 #background color 
-root.config(bg="white")
+root['bg'] = "white"
+
+
+
+#root.resizable(False, False)
 
 
 def write(text):
@@ -23,7 +28,8 @@ def write(text):
 def clear():
     #Remove all text from the calculator's input field
     ent.delete(0, END)
-    resl.config(text="")
+    resl.config(text="=", fg="black")
+
 
 
 def cl():
@@ -32,6 +38,8 @@ def cl():
         res = eval(ent.get())
         resl.config(text=f"= {res:.2f}")
         resl.config(fg="blue")
+        if res == str:
+            resl.config("eror")
         
   # Display a generic message if evaluating the expression fails.
     except ZeroDivisionError:
@@ -42,11 +50,13 @@ def cl():
         resl.config(fg="red")
 
 
+
 # Create the text-entry field where the user types or builds a calculation.
 ent = Entry(root, bd=20, font=("Arial", 10))
 resl = Label(root, text="=", bg="lightgray", fg="black", font=("Arial", 10))
 resl.pack(expand=True, fill="both")
 ent.pack(expand=True, fill="both")
+
 
 
 LB = [
@@ -66,11 +76,14 @@ for row in LB:
         if ch == "C":
             cmd = clear
         elif ch == "=":
-            cmd = cl
+            cmd = cl  
         else:
             cmd = lambda x=ch: write(x)
 
         Button(fr, text=ch,  command=cmd, font=("Arial", 10)).pack(side="left", expand=True, fill="both")
+
+
+
 
 
 root.mainloop()

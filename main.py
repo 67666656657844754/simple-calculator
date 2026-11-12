@@ -1,31 +1,25 @@
 #Import module
 from tkinter import*
-import os
 
 #create  a window
 root = Tk()
-
 #name of the window
 root.title("calculator") 
-
 #size of the window
 root.geometry("200x200+0+0")
-
 #background color 
 root['bg'] = "white"
-
 
 def write(text):
     #Append the supplied text to the calculator's input field.
     ent.insert(END, text)
     
 
-    
+
 def clear():
     #Remove all text from the calculator's input field
     ent.delete(0, END)
     resl.config(text="=", fg="black")
-
 
 
 def cl():
@@ -62,7 +56,6 @@ LB = [
     ["C", "9", "0", "="]
 ]
 
-
 for row in LB:
     # Create a frame to group and organize the calculator buttons.
     fr = Frame(root, bg="lightgray", bd=0, relief=SOLID)
@@ -77,9 +70,6 @@ for row in LB:
             cmd = lambda x=ch: write(x)
 
         Button(fr, text=ch,  command=cmd, font=("Arial", 10)).pack(side="left", expand=True, fill="both")
-
-
-
 
 
 root.mainloop()

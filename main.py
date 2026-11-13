@@ -28,8 +28,7 @@ def cl():
         res = eval(ent.get())
         resl.config(text=f"= {res:.2f}")
         resl.config(fg="blue")
-        if res == str:
-            resl.config("eror")
+
         
   # Display a generic message if evaluating the expression fails.
     except ZeroDivisionError:

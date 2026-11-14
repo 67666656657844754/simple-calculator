@@ -8,6 +8,7 @@ root.title("calculator")
 #size of the window
 root.geometry("200x250+0+0")
 #background color
+root.resizable(False, False)
 
 root.config(bg="white")
 

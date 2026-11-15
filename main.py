@@ -71,8 +71,6 @@ for row in LB:
             cmd = clear
         elif ch == "=":
             cmd = cl
-
-
         else:
             cmd = lambda x=ch: write(x)
 

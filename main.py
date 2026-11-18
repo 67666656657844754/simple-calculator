@@ -40,7 +40,7 @@ def cl():
   # Display a generic message if evaluating the expression fails.
     except ZeroDivisionError:
         resl.config(text="You cannot divide by zero")
-        resl.config(fg="yellow")    
+        resl.config(fg="red")    
     except Exception:
         resl.config(text="ERROR!")
         resl.config(fg="red")

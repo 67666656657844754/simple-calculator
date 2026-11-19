@@ -6,7 +6,7 @@ root = Tk()
 #name of the window
 root.title("calculator") 
 #size of the window
-root.geometry("200x250+0+0")
+root.geometry("200x250")
 #background color
 root.resizable(False, False)
 
@@ -35,8 +35,7 @@ def cl():
             resl.config("eror")
 
 
-
-        
+     
   # Display a generic message if evaluating the expression fails.
     except ZeroDivisionError:
         resl.config(text="You cannot divide by zero")
@@ -52,6 +51,7 @@ resl = Label(root, text="=", bg="lightgray", fg="black", font=("Arial", 10))
 resl.pack(expand=True, fill="both")
 ent.pack(expand=True, fill="both")
 
+#buttons
 LB = [
     ["+", "-", "*", "/"],
     ["4", "5", "6", "7"],
